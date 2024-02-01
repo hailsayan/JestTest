@@ -3,4 +3,8 @@ function gte(a, b){
     return a>=b ? true : false;
 }
 
-module.exports = gte;
+function sus(name){
+    return `hello ${name}`;
+}
+
+module.exports = {gte, sus}
