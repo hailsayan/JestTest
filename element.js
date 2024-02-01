@@ -7,4 +7,12 @@ function sus(name){
     return `hello ${name}`;
 }
 
-module.exports = {gte, sus}
+function list(){
+    return [
+        'nazi pigs',
+        'gnome',
+        'pony'
+    ]
+}
+
+module.exports = {gte, sus, list}

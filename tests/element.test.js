@@ -1,4 +1,4 @@
-const {gte, sus} = require('./../element');
+const {gte, sus, list} = require('./../element');
 
 describe ('gte', () => {
     it("return true if a is greater than b", ()=>{
@@ -19,5 +19,12 @@ describe ('Mess', () => {
     it("return an message", ()=>{
         const result = sus('Psyon');
         expect(result).toContain('Psyon');
+    });
+})
+
+describe ('list', () => {
+    it("return list true", ()=>{
+        const result = list();
+        expect(result).toContain('gnome');
     });
 })
