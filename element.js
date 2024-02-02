@@ -19,4 +19,10 @@ function user(){
     return { id: 1, name: 'Psyon' };
 }
 
-module.exports = {gte, sus, list, user}
+function login(pass){
+    if (pass !== '123')
+        throw new Error('password is wrong');
+    return {jwt: 'owubvmRdFhee3'}
+}
+
+module.exports = {gte, sus, list, user, login}

@@ -1,4 +1,4 @@
-const {gte, sus, list, user} = require('./../element');
+const {gte, sus, list, user, login} = require('./../element');
 
 describe ('gte', () => {
     it("return true if a is greater than b", ()=>{
@@ -33,5 +33,15 @@ describe ('user', () => {
     it("return user true", ()=>{
         const result = user();
         expect(result).toHaveProperty('id');
+    });
+})
+
+describe ('login', () => {
+    it("throw an error if password is wrong", ()=>{
+        expect(()=>{login('342')}).toThrow();
+    });
+    it("if password is correct, return jwt", ()=>{
+        const result = login('123');
+        expect(result).toHaveProperty('jwt');
     });
 })
