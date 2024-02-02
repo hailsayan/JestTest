@@ -15,4 +15,8 @@ function list(){
     ]
 }
 
-module.exports = {gte, sus, list}
+function user(){
+    return { id: 1, name: 'Psyon' };
+}
+
+module.exports = {gte, sus, list, user}

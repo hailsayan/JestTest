@@ -1,4 +1,4 @@
-const {gte, sus, list} = require('./../element');
+const {gte, sus, list, user} = require('./../element');
 
 describe ('gte', () => {
     it("return true if a is greater than b", ()=>{
@@ -26,5 +26,12 @@ describe ('list', () => {
     it("return list true", ()=>{
         const result = list();
         expect(result).toContain('gnome');
+    });
+})
+
+describe ('user', () => {
+    it("return user true", ()=>{
+        const result = user();
+        expect(result).toHaveProperty('id');
     });
 })
